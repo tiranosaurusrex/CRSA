@@ -249,18 +249,18 @@
     }
 
     .hero-subtitle {
-        font-size: 2rem;
+        font-size: 2.3rem;
         font-weight: 400;
         color: white;
         margin-bottom: 15rem;
-        max-width: 800px;
+        max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
         line-height: 1.4;
     }
 
     .hero-text-content {
-        max-width: 800px;
+        max-width: 900px;
         margin: 0 auto;
         opacity: 0;
         animation: fadeIn 1s ease-out forwards;
@@ -271,7 +271,7 @@
         color: rgba(255,255,255,0.85);
         font-weight: 300;
         margin-bottom: 1.5rem;
-        font-size: 1.1rem;
+        font-size: 1.6rem;
         line-height: 1.7;
     }
 
@@ -289,6 +289,7 @@
             padding-top: 80px;
             padding: 8rem 0;
             position: relative;
+            background: var(--white);
         }
 
         .section-title {
@@ -415,14 +416,13 @@
 
         .team-row {
             display: flex;
-            flex-wrap: wrap;
-            margin: 0 -15px;
+            flex-direction: column;
+            gap: 2rem;
         }
 
-        .team-card {
-            flex: 0 0 100%;
-            padding: 0 15px;
-            margin-bottom: 3rem;
+        .team-card {  
+        width: 100%;
+        margin-bottom: 0;
         }
 
         .team-member {
@@ -694,20 +694,19 @@
         }
     </style>
 <style>
-
 <style>
 /* Complexity Section Styles */
+/* Change the complexity section background to light gray */
 .complexity-section {
   padding: 8rem 0;
-  background: linear-gradient(180deg, var(--white) 0%, var(--light-gray) 100%);
-  position: absolute;
+  background: var(--gray); /* Changed from var(--white) */
+  position: relative;
   overflow: hidden;
 }
-
 .complexity-title {
   text-align: center;
   margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .complexity-title h2 {
@@ -720,7 +719,7 @@
 .complexity-title h2::after {
   content: '';
   position: absolute;
-  bottom: -15px;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
   width: 80px;
@@ -730,18 +729,28 @@
 
 .complexity-content {
   position: relative;
-  min-height: 600px;
+  min-height: 400px;
+}
+
+.complexity-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
 }
 
 .complexity-item {
-  position: absolute;
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.8s ease-out;
   font-family: var(--font-primary);
   color: var(--text-dark);
   line-height: 1.7;
-  max-width: 400px;
+  font-size: 1.35rem;
+  width: 30%;
+  box-sizing: border-box;
 }
 
 .complexity-item.complexity-animate {
@@ -749,37 +758,22 @@
   transform: translateY(0);
 }
 
-/* First Paragraph - Far Left */
-.far-left {
-  top: 10%;
-  left: 0%;
-  text-align: justify;
-  font-size: 1.35rem;
-  max-width: 400px;
+/* Left Paragraph */
+.left {
+  text-align: left;
+  padding-right: 2rem;
 }
 
-/* Second Paragraph - Center */
+/* Center Paragraph */
 .center {
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%) translateY(15px);
   text-align: center;
-  font-size: 1.35rem;
-  max-width: 350px;
+  padding: 0 1rem;
 }
 
-.center.complexity-animate {
-  transform: translateX(-50%) translateY(0);
-}
-
-/* Third Paragraph - Bottom Right */
-.bottom-right {
-  bottom: 10%;
-  right: 0%;
+/* Right Paragraph */
+.right {
   text-align: right;
-  font-size: 1.65rem;
-  font-weight: 500;
-  max-width: 550px;
+  padding-left: 2rem;
 }
 
 /* Visual Elements */
@@ -789,28 +783,11 @@
   opacity: 0.08;
 }
 
-.visual-square {
-  top: 10%;
-  right: 15%;
-  width: 200px;
-  height: 200px;
-  background: var(--secondary-teal);
-  border-radius: 8px;
-  transform: rotate(10deg);
-}
-
-.visual-rhombus {
-  bottom: 20%;
-  left: 15%;
-  width: 180px;
-  height: 180px;
-  background: var(--accent-gold);
-  transform: rotate(45deg);
-}
 
 /* Responsive Design */
 @media (max-width: 992px) {
   .complexity-section {
+    background: var(--gray);
     padding: 4rem 0;
   }
   
@@ -819,30 +796,21 @@
     padding: 2rem 0;
   }
   
+  .complexity-row {
+    flex-direction: column;
+    padding: 0 1.5rem;
+  }
+  
   .complexity-item {
-    position: relative;
-    max-width: 100%;
-    margin-bottom: 3rem;
+    width: 100%;
+    margin-bottom: 2rem;
     transform: none !important;
-    left: auto !important;
-    right: auto !important;
-    top: auto !important;
-    bottom: auto !important;
     text-align: center !important;
-    padding: 0 1.5rem !important;
+    padding: 0 !important;
   }
   
-  .far-left, .center {
-    top: auto;
-  }
-  
-  .bottom-right {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    text-align: center;
-    font-size: 1.3rem;
-    margin-top: 3rem;
+  .left, .right {
+    text-align: center !important;
   }
   
   .complexity-visual {
@@ -850,7 +818,8 @@
   }
 }
 </style>
-    <title>CRSA | Coll Rex Strategic Advisors</title>
+</style>
+    <title>CRSA</title>
 </head>
 <body>
     <!-- Navigation -->
@@ -877,6 +846,7 @@
                 <li><a href="#services" data-menu-item>Where We Create Value</a></li>
                 <li><a href="#expertise" data-menu-item>Deep Expertise</a></li>
                 <li><a href="#clients" data-menu-item>Who We Work With</a></li>
+                <li><a href="#testimonial" data-menu-item>Trust</a></li>
                 <li><a href="#contact" data-menu-item>Contact</a></li>
             </ul>
         </nav>
@@ -898,7 +868,7 @@
     </section>
 
 <!-- Complexity Section -->
-<section class="complexity-section" id="complexity">
+    <section class="complexity-section" id="complexity">
     <div class="container">
         <div class="complexity-title">
             <h2>Strategic Clarity. Real Value.</h2>
@@ -909,23 +879,27 @@
             <div class="complexity-visual visual-square"></div>
             <div class="complexity-visual visual-rhombus"></div>
             
-            <!-- First Paragraph - Far Left -->
-            <div class="complexity-item far-left" data-complexity-aos="fade-up" data-complexity-delay="0">
-                <p>Hospitality investors, owners, and operators face rising complexity; from evolving guest expectations and operational pressure to volatile capital markets and fierce competition.</p>
-            </div>
-            
-            <!-- Second Paragraph - Center -->
-            <div class="complexity-item center" data-complexity-aos="fade-up" data-complexity-delay="300">
-                <p>We bring clarity and precision to that complexity.</p>
-            </div>
-            
-            <!-- Third Paragraph - Bottom Right -->
-            <div class="complexity-item bottom-right" data-complexity-aos="fade-up" data-complexity-delay="600">
-                <p>Our strategic advisory helps clients make high-impact decisions—improving asset performance, optimizing capital structure, and aligning every move with long-term value creation.</p>
+            <!-- Paragraphs Row -->
+            <div class="complexity-row">
+                <!-- First Paragraph - Left -->
+                <div class="complexity-item left" data-complexity-aos="fade-up" data-complexity-delay="0">
+                    <p>Hospitality investors, owners, and operators face rising complexity; from evolving guest expectations and operational pressure to volatile capital markets and fierce competition.</p>
+                </div>
+                
+                <!-- Second Paragraph - Center -->
+                <div class="complexity-item center" data-complexity-aos="fade-up" data-complexity-delay="300">
+                    <p>We bring clarity and precision to that complexity.</p>
+                </div>
+                
+                <!-- Third Paragraph - Right -->
+                <div class="complexity-item right" data-complexity-aos="fade-up" data-complexity-delay="600">
+                    <p>Our strategic advisory helps clients make high-impact decisions—improving asset performance, optimizing capital structure, and aligning every move with long-term value creation.</p>
+                </div>
             </div>
         </div>
     </div>
-</section>
+    </section>
+
 
     <!-- Services Section -->
     <section id="services" class="section">
@@ -1015,7 +989,7 @@
                     <div class="client-card">
                         <i class="fas fa-university"></i>
                         <h3>Investors</h3>
-                        <p>We advise institutional investors, family offices, and credit providers on strategic hospitality exposure- supporting decisions from underwriting and asset selection to capital structuring, operator alignment, and portfolio oversight. We bring clarity across every stage, ensuring that strategy drives value.</p>
+                        <p>We advise institutional investors, family offices, and credit providers on strategic hospitality exposure- supporting decisions from underwriting and asset selection to capital structuring, operator alignment, and portfolio oversight, ensuring that strategy drives value.</p>
                     </div>
                 </div>
                 
@@ -1040,7 +1014,7 @@
 
     <!-- Testimonial Section -->
 
-<section class="testimonial-section">
+<section id="testimonial" section class="testimonial-section">
     <div class="container">
         <div class="testimonial-content" data-aos="fade-up">
             <h3>We've Sat in Your Seat</h3>
@@ -1056,8 +1030,10 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="row justify-content-center">
+                <div class="section-title">
+                    <h2>Contact</h2>
+                </div>
                 <div class="col-lg-8 text-center" data-aos="fade-up">
-                    <h2 class="mb-5">Contact</h2>
                     <p class="lead mb-5">If you’re facing strategic decisions around hospitality investment, operations, or capital, we bring clarity, alignment, and experienced perspective.</p>
                     <p class="lead mb-5">We engage discreetly, with purpose—alongside those who shape lasting value.</p>
                     
@@ -1085,15 +1061,15 @@
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="#home">Home</a></li>
-                        <li class="mb-2"><a href="#services">Services</a></li>
+                        <li class="mb-2"><a href="#services">Where We Create Value</a></li>
                         <li class="mb-2"><a href="#expertise">Expertise</a></li>
+                        <li class="mb-2"><a href="#clients">Who We Work With</a></li>
                         <li class="mb-2"><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">
                     <h5>Contact</h5>
                     <p class="text-white-50 mb-2">contact@crsa.com</p>
-                    <p class="text-white-50 mb-0">Available by appointment</p>
                 </div>
             
             <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
