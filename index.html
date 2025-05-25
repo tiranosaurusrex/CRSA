@@ -694,12 +694,38 @@
         }
     </style>
 <style>
+
+<style>
 /* Complexity Section Styles */
 .complexity-section {
-  padding: 1rem 0;
+  padding: 8rem 0;
   background: linear-gradient(180deg, var(--white) 0%, var(--light-gray) 100%);
-  position: relative;
+  position: absolute;
   overflow: hidden;
+}
+
+.complexity-title {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.complexity-title h2 {
+  font-size: 2.75rem;
+  position: relative;
+  display: inline-block;
+  color: var(--primary-navy);
+}
+
+.complexity-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--secondary-teal);
 }
 
 .complexity-content {
@@ -715,7 +741,7 @@
   font-family: var(--font-primary);
   color: var(--text-dark);
   line-height: 1.7;
-  max-width: 500px;
+  max-width: 400px;
 }
 
 .complexity-item.complexity-animate {
@@ -723,98 +749,107 @@
   transform: translateY(0);
 }
 
-/* Top Left */
-.top-left {
+/* First Paragraph - Far Left */
+.far-left {
   top: 10%;
-  left: 0;
-  font-size: 1.2rem;
+  left: 0%;
   text-align: center;
-}
-
-/* Middle Center */
-.middle-center {
-  top: 45%;
-  left: 50%;
-  transform: translate(-60%, -40%) translateY(15px);
-  font-size: 1.2rem;
-  text-align: center;
+  font-size: 1.25rem;
   max-width: 400px;
 }
 
-.middle-center.complexity-animate {
-  transform: translate(-50%, -50%) translateY(0);
+/* Second Paragraph - Center */
+.center {
+  top: 10%;
+  left: 55%;
+  transform: translateX(-50%) translateY(15px);
+  text-align: center;
+  font-size: 1.25rem;
+  max-width: 300px;
 }
 
-/* Bottom Right - Wider, shorter rectangle with gradient background */
+.center.complexity-animate {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Third Paragraph - Bottom Right */
 .bottom-right {
-  bottom: 4%;
-  right: 0;
-  font-size: 1.4rem;
-  font-weight: 500;
+  bottom: 20%;
+  right: 0%;
   text-align: center;
-  padding: 1.5rem 3rem;
-  background: linear-gradient(135deg, rgba(15, 45, 82, 0.95) 0%, rgba(0, 125, 140, 0.95) 100%);
-  color: white;
-  border-radius: 8px 0 0 8px;
-  box-shadow: -8px 8px 40px rgba(0, 0, 0, 0.15);
-  margin-right: -8rem;
-  max-width: 750px;
-  width: calc(100% + 4rem);
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  max-width: 600px;
+}
+
+/* Visual Elements */
+.complexity-visual {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.08;
+}
+
+.visual-square {
+  top: 10%;
+  right: 15%;
+  width: 200px;
+  height: 200px;
+  background: var(--secondary-teal);
+  border-radius: 8px;
+  transform: rotate(10deg);
+}
+
+.visual-rhombus {
+  bottom: 20%;
+  left: 15%;
+  width: 180px;
+  height: 180px;
+  background: var(--accent-gold);
+  transform: rotate(45deg);
 }
 
 /* Responsive Design */
 @media (max-width: 992px) {
   .complexity-section {
-    padding: 6rem 0;
+    padding: 4rem 0;
   }
   
   .complexity-content {
-    min-height: 600px;
+    min-height: auto;
+    padding: 2rem 0;
   }
   
   .complexity-item {
     position: relative;
     max-width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     transform: none !important;
     left: auto !important;
     right: auto !important;
     top: auto !important;
     bottom: auto !important;
-    text-align: left !important;
-    padding: 0 !important;
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    margin-right: 0 !important;
-    width: auto !important;
-    border-radius: 0 !important;
-    color: var(--text-dark) !important;
-    min-height: auto !important;
-    display: block !important;
+    text-align: center !important;
+    padding: 0 1.5rem !important;
   }
   
-  .middle-center {
-    text-align: center !important;
-    transform: none !important;
-    margin: 2rem auto;
+  .far-left, .center {
+    top: auto;
   }
   
   .bottom-right {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    text-align: center;
     font-size: 1.3rem;
-    background: linear-gradient(135deg, rgba(15, 45, 82, 0.95) 0%, rgba(0, 125, 140, 0.95) 100%);
-    color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    margin: 2rem 0;
+    margin-top: 3rem;
+  }
+  
+  .complexity-visual {
+    display: none;
   }
 }
 </style>
-
     <title>CRSA | Coll Rex Strategic Advisors</title>
 </head>
 <body>
@@ -838,6 +873,7 @@
     <div class="menu-overlay" id="menu-overlay">
         <nav class="menu-nav">
             <ul>
+                <li><a href="#complexity" data-menu-item>Strategic Clarity</a></li>
                 <li><a href="#services" data-menu-item>Where We Create Value</a></li>
                 <li><a href="#expertise" data-menu-item>Deep Expertise</a></li>
                 <li><a href="#clients" data-menu-item>Who We Work With</a></li>
@@ -860,28 +896,36 @@
             </div>
         </div>
     </section>
+
 <!-- Complexity Section -->
-<section class="complexity-section">
+<section class="complexity-section" id="complexity">
     <div class="container">
+        <div class="complexity-title">
+            <h2>Strategic Clarity. Real Value.</h2>
+        </div>
+        
         <div class="complexity-content">
-            <!-- Top Left -->
-            <div class="complexity-item top-left" data-complexity-aos="fade-up" data-complexity-delay="0">
+            <!-- Visual Elements -->
+            <div class="complexity-visual visual-square"></div>
+            <div class="complexity-visual visual-rhombus"></div>
+            
+            <!-- First Paragraph - Far Left -->
+            <div class="complexity-item far-left" data-complexity-aos="fade-up" data-complexity-delay="0">
                 <p>Hospitality investors, owners, and operators face increasing complexity—evolving guest expectations, rising operational pressures, volatile capital markets, and a dynamic competitive landscape.</p>
             </div>
             
-            <!-- Middle Center -->
-            <div class="complexity-item middle-center" data-complexity-aos="fade-up" data-complexity-delay="300">
+            <!-- Second Paragraph - Center -->
+            <div class="complexity-item center" data-complexity-aos="fade-up" data-complexity-delay="300">
                 <p>We help clients cut through that complexity with clarity and precision.</p>
             </div>
             
-            <!-- Bottom Right -->
+            <!-- Third Paragraph - Bottom Right -->
             <div class="complexity-item bottom-right" data-complexity-aos="fade-up" data-complexity-delay="600">
-                <p>Our high-impact advisory empowers better strategic decisions—creating real value through performance improvement, capital structure optimization, and sensible, actionable roadmaps that strengthen long-term resilience and unlock the full potential of each asset.</p>
+                <p>Our high-impact advisory empowers better strategic decisions—creating real value through performance improvement, capital structure optimization, and sensible, actionable roadmaps.</p>
             </div>
         </div>
     </div>
 </section>
-
 
     <!-- Services Section -->
     <section id="services" class="section">
@@ -945,22 +989,14 @@
                 <div class="team-card" id="javier-card">
                     <div class="team-member">
                         <h3>Javier Coll</h3>
-                        <p>Hospitality executive and transformative dealmaker with over 30 years of experience in global resort and leisure sectors. As co-founder of Apple Leisure Group (ALG) and its flagship brand AMResorts, he reshaped the all-inclusive resort model, transforming it into a premium, investment-grade hospitality platform.</p>
-                        <p>Under Javier's leadership, ALG expanded significantly across Latin America, the Caribbean, and Europe, growing from a few properties to over 100 resorts. He orchestrated major investment and M&A transactions, including strategic partnerships with Bain Capital and KKR, and multiple acquisitions across the hospitality value chain, positioning ALG as a vertically integrated market leader.</p>
-                        <p>The acquisition of ALG by Hyatt Hotels was a landmark event in the global hospitality industry, with Javier playing a central role as one of its key architects. He remained with Hyatt to oversee integration and expansion, driving substantial international growth.</p>
-                        <p>Throughout his career, Javier has demonstrated broad-based leadership across operations, commercial strategy, branding, and global development, consistently serving as a strategic visionary shaping the direction of entire organizations.</p>
-                        <p>Now, as co-founder of CRSA, he leverages his extensive general management expertise, visionary outlook, and deep transactional experience to guide investors, owners, and operators through complex strategic challenges.</p>
+                        <p> A transformative hospitality executive with over 30 years of global experience. As co-founder of Apple Leisure Group, he revolutionized the luxury all-inclusive model, scaling the company from a handful of resorts to an international portfolio of over 100 properties. He has led major investment and M&A transactions with top-tier firms like Bain Capital and KKR, and played a central role in the landmark sale of ALG to Hyatt. Known for his visionary leadership and ability to shape entire segments of the industry, Javier now advises investors, owners, and operators, bringing unmatched strategic insight and transactional depth to complex decisions in the hospitality sector.</p>
                     </div>
                 </div>
                 
                 <div class="team-card" id="domingo-card">
                     <div class="team-member">
                         <h3>Domingo Rex</h3>
-                        <p>Senior financial advisor and strategic practitioner with over 25 years of experience across banking, credit, and investment advisory in Europe and Latin America. He has advised financial institutions, funds, and corporate clients on complex transactions, particularly within the hospitality, real estate, and special situations sectors.</p>
-                        <p>Previously, Domingo held senior roles at Banco CAM, including Managing Director and Country Head in Mexico, where he managed a tourism-focused credit portfolio of nearly $2 billion. He also advised major Spanish banks such as CaixaBank and Bankia during their strategic divestments in Mexico, accelerating execution while preserving shareholder value.</p>
-                        <p>His advisory experience includes supporting private investors such as Rodina, guiding and executing its initial hospitality investments, as well as assisting banks and institutional clients in tourism and real estate transactions across Mexico and the Caribbean.</p>
-                        <p>Domingo has served on the boards of companies within these sectors, offering strategic direction through growth, restructuring, and capital deployment. He is known for his technical expertise, regional insight, honesty, clarity, and consistent delivery.</p>
-                        <p>Now, as co-founder of CRSA, Domingo partners with investors, institutions, and operators to assess opportunities, structure complex deals, and create lasting value across evolving markets.</p>
+                        <p>A seasoned financial strategist with more than 25 years of advisory and banking experience across Europe and Latin America. With a sharp focus on hospitality, real estate, and special situations, he has guided banks, funds, and private investors through complex deals and restructurings. Formerly Managing Director and Country Head for Banco CAM in Mexico, Domingo has led billion-dollar credit portfolios and strategic divestments for major institutions. Today, he helps clients uncover opportunities and structure deals that create long-term value, combining technical expertise with regional acumen and a reputation for clarity, trust, and consistent execution.</p>
                     </div>
                 </div>
             </div>
@@ -979,7 +1015,7 @@
                     <div class="client-card">
                         <i class="fas fa-university"></i>
                         <h3>Investors</h3>
-                        <p>We advise institutional investors, family offices, and credit providers on strategic hospitality exposure—from underwriting and asset selection to capital structuring, operator alignment, and portfolio management. Whether equity or debt, our work focuses on protecting downside, identifying upside, and ensuring strategic clarity across every decision.</p>
+                        <p>We advise institutional investors, family offices, and credit providers on strategic hospitality exposure- supporting decisions from underwriting and asset selection to capital structuring, operator alignment, and portfolio oversight. We bring clarity across every stage, ensuring that strategy drives value.</p>
                     </div>
                 </div>
                 
@@ -1011,7 +1047,7 @@
             <p class="lead">We bring the perspective of principals who have been on all sides of hospitality —<strong>operators, investors, owners, and lenders.</strong></p>
             <p class="lead">We understand the weight of strategic decisions because we’ve made them.</p>
             <p class="lead">That experience shapes how we think, how we advise, and how we stay close to what matters.</p>
-            <p class="lead"><strong>Every engagement is led by us — discreetly, directly, and with purpose.</strong></p>
+            <p class="lead"><strong>Every engagement is led by us — directly and with purpose.</strong></p>
         </div>
     </div>
 </section>
