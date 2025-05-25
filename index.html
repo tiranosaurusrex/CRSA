@@ -631,6 +631,94 @@
             opacity: 1;
         }
 
+        /* Complexity Section Styles - FIXED */
+        .complexity-section {
+            padding: 8rem 0;
+            background: var(--light-gray); /* FIXED: Changed from var(--gray) to var(--light-gray) */
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .complexity-title {
+            text-align: center;
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .complexity-title h2 {
+            font-size: 2.75rem;
+            position: relative;
+            display: inline-block;
+            color: var(--primary-navy);
+        }
+
+        .complexity-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-teal);
+        }
+
+        .complexity-content {
+            position: relative;
+            min-height: 400px;
+        }
+
+        .complexity-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .complexity-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+            font-family: var(--font-primary);
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: 1.35rem;
+            width: 30%;
+            box-sizing: border-box;
+        }
+
+        .complexity-item.complexity-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Left Paragraph */
+        .left {
+            text-align: left;
+            padding-right: 2rem;
+        }
+
+        /* Center Paragraph */
+        .center {
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        /* Right Paragraph */
+        .right {
+            text-align: right;
+            padding-left: 2rem;
+        }
+
+        /* Visual Elements */
+        .complexity-visual {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.08;
+        }
+
         /* Responsive Design */
         @media (min-width: 992px) {
             .team-card {
@@ -645,6 +733,37 @@
             
             .menu-nav a {
                 font-size: 2rem;
+            }
+            
+            .complexity-section {
+                background: var(--light-gray); /* Ensure it stays light gray on mobile too */
+                padding: 4rem 0;
+            }
+            
+            .complexity-content {
+                min-height: auto;
+                padding: 2rem 0;
+            }
+            
+            .complexity-row {
+                flex-direction: column;
+                padding: 0 1.5rem;
+            }
+            
+            .complexity-item {
+                width: 100%;
+                margin-bottom: 2rem;
+                transform: none !important;
+                text-align: center !important;
+                padding: 0 !important;
+            }
+            
+            .left, .right {
+                text-align: center !important;
+            }
+            
+            .complexity-visual {
+                display: none;
             }
         }
 
@@ -693,132 +812,6 @@
             }
         }
     </style>
-<style>
-<style>
-/* Complexity Section Styles */
-/* Change the complexity section background to light gray */
-.complexity-section {
-  padding: 8rem 0;
-  background: var(--gray); /* Changed from var(--white) */
-  position: relative;
-  overflow: hidden;
-}
-.complexity-title {
-  text-align: center;
-  margin-top: 3rem;
-  margin-bottom: 4rem;
-}
-
-.complexity-title h2 {
-  font-size: 2.75rem;
-  position: relative;
-  display: inline-block;
-  color: var(--primary-navy);
-}
-
-.complexity-title h2::after {
-  content: '';
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: var(--secondary-teal);
-}
-
-.complexity-content {
-  position: relative;
-  min-height: 400px;
-}
-
-.complexity-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 2rem;
-}
-
-.complexity-item {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease-out;
-  font-family: var(--font-primary);
-  color: var(--text-dark);
-  line-height: 1.7;
-  font-size: 1.35rem;
-  width: 30%;
-  box-sizing: border-box;
-}
-
-.complexity-item.complexity-animate {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Left Paragraph */
-.left {
-  text-align: left;
-  padding-right: 2rem;
-}
-
-/* Center Paragraph */
-.center {
-  text-align: center;
-  padding: 0 1rem;
-}
-
-/* Right Paragraph */
-.right {
-  text-align: right;
-  padding-left: 2rem;
-}
-
-/* Visual Elements */
-.complexity-visual {
-  position: absolute;
-  z-index: 0;
-  opacity: 0.08;
-}
-
-
-/* Responsive Design */
-@media (max-width: 992px) {
-  .complexity-section {
-    background: var(--gray);
-    padding: 4rem 0;
-  }
-  
-  .complexity-content {
-    min-height: auto;
-    padding: 2rem 0;
-  }
-  
-  .complexity-row {
-    flex-direction: column;
-    padding: 0 1.5rem;
-  }
-  
-  .complexity-item {
-    width: 100%;
-    margin-bottom: 2rem;
-    transform: none !important;
-    text-align: center !important;
-    padding: 0 !important;
-  }
-  
-  .left, .right {
-    text-align: center !important;
-  }
-  
-  .complexity-visual {
-    display: none;
-  }
-}
-</style>
-</style>
     <title>CRSA</title>
 </head>
 <body>
