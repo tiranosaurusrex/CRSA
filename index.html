@@ -252,7 +252,7 @@
         font-size: 2rem;
         font-weight: 400;
         color: white;
-        margin-bottom: 2rem;
+        margin-bottom: 15rem;
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
@@ -693,7 +693,113 @@
             }
         }
     </style>
+<style>
+/* Complexity Section Styles */
+.complexity-section {
+    padding: 1rem 0;
+    background: linear-gradient(180deg, var(--white) 0%, var(--light-gray) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.complexity-content {
+    position: relative;
+    min-height: 600px;
+}
+
+.complexity-item {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+    font-family: var(--font-primary);
+    color: var(--text-dark);
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+.complexity-item.complexity-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Top Left */
+.top-left {
+    top: 10%;
+    left: 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Middle Center */
+.middle-center {
+    top: 45%;
+    left: 50%;
+    transform: translate(-60%, -40%) translateY(15px);
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 400px;
+}
+
+.middle-center.complexity-animate {
+    transform: translate(-50%, -50%) translateY(0);
+}
+
+/* Bottom Right - Rectangle extending from margin */
+.bottom-right {
+    bottom: 0%;
+    right: 0;
+    font-size: 1.4rem;
+    text-align: right;
+    padding: 2rem 2rem 2rem 4rem;
+    background-color: var(--white);
+    border-left: 4px solid var(--primary-color);
+    box-shadow: -5px 5px 30px rgba(0,0,0,0.05);
+    margin-right: -2rem;
+    max-width: 600px;
+    width: calc(100% + 1rem);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .complexity-section {
+        padding: 6rem 0;
+    }
     
+    .complexity-content {
+        min-height: 600px;
+    }
+    
+    .complexity-item {
+        position: relative;
+        max-width: 100%;
+        margin-bottom: 2rem;
+        transform: none !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        text-align: left !important;
+        padding: 0 !important;
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        margin-right: 0 !important;
+        width: auto !important;
+    }
+    
+    .middle-center {
+        text-align: center !important;
+        transform: none !important;
+        margin: 2rem auto;
+    }
+    
+    .bottom-right {
+        font-size: 1.3rem;
+    }
+}
+</style>
+
     <title>CRSA | Coll Rex Strategic Advisors</title>
 </head>
 <body>
@@ -733,15 +839,34 @@
                     <h1 class="hero-subtitle">Strategic Advisory for Hospitality Investors, Owners, and Operators</h1>
                     
                     <div class="hero-text-content">
-                        <p class="lead">Hospitality investors, owners, and operators face increasing complexity—evolving guest expectations, rising operational pressures, volatile capital markets, and a dynamic competitive landscape.</p>
-                        <p class="lead">We help clients cut through that complexity with clarity and precision.</p>
-                        <p class="lead">Our high-impact advisory empowers better strategic decisions—creating real value through performance improvement, capital structure optimization, and sensible, actionable roadmaps that strengthen long-term resilience and unlock the full potential of each asset.</p>
+                        <p class="lead">We help you make high-impact strategic decisions. From capital structure to asset positioning, we bring the clarity and experience needed to turn strategic insight into long-term growth.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+<!-- Complexity Section -->
+<section class="complexity-section">
+    <div class="container">
+        <div class="complexity-content">
+            <!-- Top Left -->
+            <div class="complexity-item top-left" data-complexity-aos="fade-up" data-complexity-delay="0">
+                <p>Hospitality investors, owners, and operators face increasing complexity—evolving guest expectations, rising operational pressures, volatile capital markets, and a dynamic competitive landscape.</p>
+            </div>
+            
+            <!-- Middle Center -->
+            <div class="complexity-item middle-center" data-complexity-aos="fade-up" data-complexity-delay="300">
+                <p>We help clients cut through that complexity with clarity and precision.</p>
+            </div>
+            
+            <!-- Bottom Right -->
+            <div class="complexity-item bottom-right" data-complexity-aos="fade-up" data-complexity-delay="600">
+                <p><strong>Our high-impact advisory empowers better strategic decisions—creating real value through performance improvement, capital structure optimization, and sensible, actionable roadmaps that strengthen long-term resilience and unlock the full potential of each asset.</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Services Section -->
     <section id="services" class="section">
@@ -837,7 +962,7 @@
             <div class="row g-4">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="client-card">
-                        <i class="fas fa-building"></i>
+                        <i class="fas fa-university"></i>
                         <h3>Investors</h3>
                         <p>We advise institutional investors, family offices, and credit providers on strategic hospitality exposure—from underwriting and asset selection to capital structuring, operator alignment, and portfolio management. Whether equity or debt, our work focuses on protecting downside, identifying upside, and ensuring strategic clarity across every decision.</p>
                     </div>
@@ -845,7 +970,7 @@
                 
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="client-card">
-                        <i class="fas fa-university"></i>
+                        <i class="fas fa-concierge-bell"></i>
                         <h3>Operators</h3>
                         <p>We collaborate with operators navigating performance demands, partner expectations, and evolving market dynamics. Our strategic input helps align operations with ownership priorities and long-term asset value.</p>
                     </div>
@@ -853,7 +978,7 @@
                 
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="client-card">
-                        <i class="fas fa-concierge-bell"></i>
+                        <i class="fas fa-building"></i>
                         <h3>Owners</h3>
                         <p>We support hotel asset owners in enhancing long-term value, navigating complex decisions, and aligning stakeholders—from performance oversight to capital planning and repositioning strategy.</p>
                     </div>
@@ -919,12 +1044,14 @@
                     <p class="text-white-50 mb-2">contact@crsa.com</p>
                     <p class="text-white-50 mb-0">Available by appointment</p>
                 </div>
-            </div>
             
             <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center">
+                <p class="mb-0 text-white-50"> Madrid | Mexico City | Philadelphia</p>
+            </div>
             
             <div class="text-center">
-                <p class="mb-0 text-white-50">&copy; 2025 Coll Rex Strategic Advisors. All rights reserved.</p>
+                <p class="mb-0 text-white-50">&copy;2025 Coll Rex Strategic Advisors. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -997,5 +1124,27 @@
         window.addEventListener('scroll', checkScroll);
         window.addEventListener('load', checkScroll);
     </script>
+<script>
+    // Animation Script
+    function checkComplexityScroll() {
+        const complexityItems = document.querySelectorAll('[data-complexity-aos]');
+        
+        complexityItems.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            const isVisible = (rect.top <= window.innerHeight * 0.8) && (rect.bottom >= 0);
+            
+            if (isVisible && !item.classList.contains('complexity-animate')) {
+                const delay = parseInt(item.getAttribute('data-complexity-delay')) || 0;
+                
+                setTimeout(() => {
+                    item.classList.add('complexity-animate');
+                }, delay);
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', checkComplexityScroll);
+    window.addEventListener('load', checkComplexityScroll);
+</script>
 </body>
 </html>
