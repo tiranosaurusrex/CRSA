@@ -4,20 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <!-- Modern, professional fonts -->
+    <!-- SEO Meta Tags -->
+    <title>CRSA - Strategic Advisory for Hospitality</title>
+    <meta name="description" content="Strategic advisory for hospitality investors, owners, and operators. We bring clarity and experience to turn strategic insight into long-term growth.">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Bootstrap CSS -->
+    <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+        /* ===== Global Variables ===== */
         :root {
-            /* Refined Brand Colors */
+            /* Color Palette */
             --primary-navy: #0F2D52;
             --secondary-teal: #007D8C;
             --accent-gold: #C4A86F;
@@ -32,7 +35,7 @@
             --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-display: 'Playfair Display', Georgia, serif;
             
-            /* Spacing & Layout */
+            /* Design Elements */
             --border-radius: 6px;
             --border-radius-lg: 12px;
             --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -40,7 +43,7 @@
             --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.12);
         }
 
-        /* Base Styles */
+        /* ===== Base Styles ===== */
         html {
             scroll-behavior: smooth;
         }
@@ -63,44 +66,43 @@
             color: var(--dark-charcoal);
         }
 
-        /* Navigation - Minimalist */
+        /* ===== Navigation ===== */
         .navbar {
-        padding: 2rem 0; /* Increased navbar height */
-        background: rgba(255, 255, 255, 0.98) !important;
-        backdrop-filter: blur(10px);
-        transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-        border-bottom: 1px solid rgba(224, 229, 236, 0.5);
-    }
+            padding: 2rem 0;
+            background: rgba(255, 255, 255, 0.98) !important;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            border-bottom: 1px solid rgba(224, 229, 236, 0.5);
+        }
 
-    .navbar.scrolled {
-        padding: 1.5rem 0;
-    }
+        .navbar.scrolled {
+            padding: 1.5rem 0;
+        }
 
-    .navbar-brand {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        font-family: var(--font-display);
-        font-weight: 700;
-        font-size: 2.25rem;
-        color: #005f73 !important; /* Dark teal */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        line-height: 1.2;
-    }
+        .navbar-brand {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 2.25rem;
+            color: #005f73 !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.2; 
+        }
 
-    .brand-tagline {
-        font-size: 0.85rem;
-        font-weight: 400;
-        color: var(--text-light) !important;
-        font-family: var(--font-primary);
-        letter-spacing: 0.1em;
-        margin-top: 0.2rem;
-    }
+        .brand-tagline {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: var(--text-light) !important;
+            font-family: var(--font-primary);
+            letter-spacing: 0.1em;
+            margin-top: 0.2rem;
+        }
 
-
-        /* Modern Hamburger Menu */
+        /* ===== Mobile Menu ===== */
         .hamburger {
             display: flex;
             flex-direction: column;
@@ -135,7 +137,6 @@
             background-color: var(--white);
         }
 
-        /* Fullscreen Menu Overlay */
         .menu-overlay {
             position: fixed;
             top: 0;
@@ -149,6 +150,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            padding-top: 5rem; 
             opacity: 0;
             visibility: hidden;
             transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
@@ -176,7 +178,7 @@
         }
 
         .menu-nav li {
-            margin: 2rem 0;
+            margin: 1.5rem 0;
             opacity: 0;
             transform: translateY(20px);
             transition: all 0.3s ease;
@@ -191,6 +193,9 @@
         .menu-nav li:nth-child(2) { transition-delay: 0.2s; }
         .menu-nav li:nth-child(3) { transition-delay: 0.3s; }
         .menu-nav li:nth-child(4) { transition-delay: 0.4s; }
+        .menu-nav li:nth-child(5) { transition-delay: 0.5s; }
+        .menu-nav li:nth-child(6) { transition-delay: 0.6s; }
+        .menu-nav li:nth-child(7) { transition-delay: 0.7s; }
 
         .menu-nav a {
             color: var(--white);
@@ -224,69 +229,66 @@
             width: 100%;
         }
 
-   /* Hero Section - Premium Entrance */
-   .hero-section {
-        background: linear-gradient(135deg, 
-            rgba(15, 45, 82, 0.95) 0%, 
-            rgba(0, 125, 140, 0.9) 100%);
-        color: white;
-        height: 100vh;
-        min-height: 800px;
-        display: flex;
-        align-items: center;
-        position: relative;
-        overflow: hidden;
-        padding-top: 120px; /* Increased to account for taller navbar */
-    }
+        /* ===== Hero Section ===== */
+        .hero-section {
+            background: linear-gradient(135deg, 
+                rgba(15, 45, 82, 0.95) 0%, 
+                rgba(0, 125, 140, 0.9) 100%);
+            color: white;
+            height: 100vh;
+            min-height: 800px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 120px;
+        }
 
+        .hero-content {
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
 
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: white;
+            margin-top: 8rem;
+            margin-bottom: 15rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.2;
+        }
 
-    .hero-content {
-        width: 100%;
-        position: relative;
-        z-index: 2;
-        text-align: center;
-    }
+        .hero-text-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            animation-delay: 0.5s;
+        }
 
-    .hero-subtitle {
-        font-size: 2.3rem;
-        font-weight: 400;
-        color: white;
-        margin-bottom: 15rem;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.4;
-    }
-
-    .hero-text-content {
-        max-width: 900px;
-        margin: 0 auto;
-        opacity: 0;
-        animation: fadeIn 1s ease-out forwards;
-        animation-delay: 0.5s;
-    }
-
-    .hero-text-content .lead {
-        color: rgba(255,255,255,0.85);
+        .hero-text-content .lead {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: rgba(255,255,255,0.9);
         font-weight: 300;
-        margin-bottom: 1.5rem;
-        font-size: 1.6rem;
-        line-height: 1.7;
-    }
+        }
 
-    .hero-text-content .lead strong {
-        font-weight: 500;
-        color: white;
-    }
+        .hero-text-content .lead strong {
+            font-weight: 400;
+            color: white;
+        }
 
-    @keyframes fadeIn {
-        to { opacity: 1; }
-    }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
 
-        /* Section Styling */
+        /* ===== Section Styling ===== */
         .section {
-            padding-top: 80px;
             padding: 8rem 0;
             position: relative;
             background: var(--white);
@@ -314,7 +316,11 @@
             background: var(--secondary-teal);
         }
 
-        /* Enhanced Service Cards */
+        /* ===== Service Cards ===== */
+        .service-section {
+                background: var(--light-gray);
+                padding: 9rem 0;
+            }
         .service-card {
             border: 1px solid var(--medium-gray);
             border-radius: var(--border-radius-lg);
@@ -408,7 +414,155 @@
             display: block;
         }
 
-        /* Team Section - Horizontal Cards */
+        /* ===== All-Inclusive Strategy Section ===== */
+        .edge-section {
+            background: var(--white);
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .edge-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .edge-header {
+            text-align: center;
+            margin-bottom: 5rem;
+            position: relative;
+        }
+        
+        .edge-header h2 {
+            font-size: 2.75rem;
+            color: var(--primary-navy);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 1.5rem;
+        }
+        
+        .edge-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 3px;
+            background: var(--secondary-teal);
+        }
+        
+        .edge-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .edge-columns {
+            display: flex;
+            gap: 4rem;
+            justify-content: space-between;
+            position: relative;
+        }
+        
+        .edge-column {
+            flex: 1;
+            position: relative;
+        }
+        
+        .edge-column::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -2rem;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(135deg, 
+            rgba(15, 45, 82, 0.95) 0%, 
+            rgba(0, 125, 140, 0.9) 100%);
+            border-radius: 3px;
+        }
+        
+        .edge-column:first-child::before {
+            display: none;
+        }
+        
+        .edge-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .edge-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary-teal);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .edge-column:hover .edge-icon {
+            background: var(--accent-gold); 
+            transform: scale(1.1); 
+            transition: all 0.3s ease;
+        }
+
+        .edge-column h3 {
+            font-size: 1.75rem;
+            color: var(--primary-navy);
+            margin: 0;
+        }
+        
+        .edge-column p {
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            padding-left: 66px;
+        }
+        
+        .edge-divider {
+            text-align: center;
+            margin: 4rem 0;
+            position: relative;
+            z-index: 2;
+            width: 10%;
+        }
+
+        .edge-divider span {
+        display: inline-block;
+        width: 1150px;
+        padding: 0.25rem 2.5rem;
+        background: var(--accent-gold);
+        color: var(--primary-navy);
+        font-family: var(--font-primary);
+        font-weight: 400;
+        border-radius: 30px;
+        transform: rotate(0deg);
+        font-size: 1rem;
+        letter-spacing: 0.05em;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Add a subtle pulse animation on hover */
+    .edge-divider span:hover {
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+        /* ===== Team Section ===== */
         .team-section {
             background: var(--light-gray);
             padding: 6rem 0;
@@ -421,8 +575,8 @@
         }
 
         .team-card {  
-        width: 100%;
-        margin-bottom: 0;
+            width: 100%;
+            margin-bottom: 0;
         }
 
         .team-member {
@@ -461,7 +615,12 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Client Cards */
+        /* ===== Client Cards ===== */
+        .clients-section {
+            background: var(--white);
+            padding: 6rem 0;
+        }
+        
         .client-card {
             border: 1px solid var(--medium-gray);
             border-radius: var(--border-radius-lg);
@@ -509,43 +668,44 @@
             transform: scale(1.1);
         }
 
-    /* Testimonial Section - Matching Hero Style */
-    .testimonial-section {
-        background: linear-gradient(135deg, 
-            rgba(15, 45, 82, 0.95) 0%, 
-            rgba(0, 125, 140, 0.9) 100%);
-        color: white;
-        padding: 6rem 0;
-        position: relative;
-    }
+        /* ===== Testimonial Section ===== */
+        .testimonial-section {
+            background: linear-gradient(135deg, 
+                rgba(15, 45, 82, 0.95) 0%, 
+                rgba(0, 125, 140, 0.9) 100%);
+            color: white;
+            padding: 6rem 0;
+            position: relative;
+        }
 
-    .testimonial-content {
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: center;
-        position: relative;
-        z-index: 2;
-    }
+        .testimonial-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
 
-    .testimonial-content h3 {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-        color: white;
-        font-family: var(--font-display);
-    }
+        .testimonial-content h3 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: white;
+            font-family: var(--font-display);
+        }
 
-    .testimonial-content .lead {
-        font-size: 1.1rem;
-        line-height: 1.8;
-        margin-bottom: 1.5rem;
-        color: rgba(255,255,255,0.85);
-    }
+        .testimonial-content .lead {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: rgba(255,255,255,0.85);
+        }
 
-    .testimonial-content .lead strong {
-        color: white;
-        font-weight: 500;
-    }
-        /* Contact Section */
+        .testimonial-content .lead strong {
+            color: white;
+            font-weight: 500;
+        }
+
+        /* ===== Contact Section ===== */
         .contact-section {
             text-align: center;
             padding: 6rem 0;
@@ -576,65 +736,84 @@
             box-shadow: var(--shadow-md);
         }
 
-        /* Footer */
+        /* ===== Footer ===== */
         .footer {
-    background: var(--dark-charcoal);
-    color: var(--white);
-    padding: 4rem 0 2rem;
-}
-
-.footer h3,
-.footer h5 {
-    color: var(--white); /* Ensure headings are white */
-    font-family: var(--font-display); /* Match your site's heading font */
-    margin-bottom: 1.5rem;
-}
-
-.footer h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.footer h5 {
-    font-size: 1.25rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.footer a {
-    color: var(--text-light);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer a:hover {
-    color: var(--accent-gold);
-}
-
-.text-white-50 {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-        /* Animations */
-        [data-aos] {
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            background: var(--dark-charcoal);
+            color: var(--white);
+            padding: 4rem 0 2rem;
         }
 
-        [data-aos="fade-up"] {
-            transform: translateY(30px);
+        .footer h5 {
+            color: var(--white);
+            font-family: var(--font-display);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer h5 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .footer a {
+            color: var(--text-light);
+            max-width: 150px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--accent-gold);
+        }
+
+        .text-white-50 {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.5);
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 0rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-links a::before {
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
             opacity: 0;
+            transition: all 0.3s ease;
         }
 
-        [data-aos="fade-up"].aos-animate {
-            transform: translateY(0);
+        .footer-links a:hover::before {
             opacity: 1;
         }
 
-        /* Complexity Section Styles - FIXED */
+        .social-links a {
+            color: var(--white);
+            font-size: 1.25rem;
+            margin-right: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-gold);
+            transform: translateY(-3px);
+        }
+
+        /* ===== Complexity Section ===== */
         .complexity-section {
-            padding: 8rem 0;
-            background: var(--light-gray); /* FIXED: Changed from var(--gray) to var(--light-gray) */
+            padding: 6rem 0;
+            background: var(--white);
             position: relative;
             overflow: hidden;
         }
@@ -719,7 +898,7 @@
             opacity: 0.08;
         }
 
-        /* Responsive Design */
+        /* ===== Responsive Design ===== */
         @media (min-width: 992px) {
             .team-card {
                 flex: 0 0 50%;
@@ -736,7 +915,7 @@
             }
             
             .complexity-section {
-                background: var(--light-gray); /* Ensure it stays light gray on mobile too */
+                background: var(--light-gray);
                 padding: 4rem 0;
             }
             
@@ -766,6 +945,7 @@
                 display: none;
             }
         }
+
 
         @media (max-width: 768px) {
             .navbar-brand {
@@ -812,7 +992,6 @@
             }
         }
     </style>
-    <title>CRSA</title>
 </head>
 <body>
     <!-- Navigation -->
@@ -837,6 +1016,7 @@
             <ul>
                 <li><a href="#complexity" data-menu-item>Strategic Clarity</a></li>
                 <li><a href="#services" data-menu-item>Where We Create Value</a></li>
+                <li><a href="#edge" data-menu-item>All-Inclusive Edge</a></li>
                 <li><a href="#expertise" data-menu-item>Deep Expertise</a></li>
                 <li><a href="#clients" data-menu-item>Who We Work With</a></li>
                 <li><a href="#testimonial" data-menu-item>Trust</a></li>
@@ -850,52 +1030,56 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10 hero-content">
-                    <h1 class="hero-subtitle">Strategic Advisory for Hospitality Investors, Owners, and Operators</h1>
-                    
+                    <h1 class="hero-title">Strategic Advisory for Hospitality Investors, Owners & Operators</h1>
+
                     <div class="hero-text-content">
-                        <p class="lead">We help you make high-impact strategic decisions. From capital structure to asset positioning, we bring the clarity and experience needed to turn strategic insight into long-term growth.</p>
+                        <p class="lead"><strong>We help you make high-impact strategic decisions.</strong></p>
+                        <p class="lead">We bring the clarity and experience needed to turn strategic insight into long-term growth.</p>
+                        <p class="lead">We have a unique edge in all-inclusive resorts.</p>
+                    </div>
+
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- Complexity Section -->
+    <!-- Complexity Section -->
     <section class="complexity-section" id="complexity">
-    <div class="container">
-        <div class="complexity-title">
-            <h2>Strategic Clarity. Real Value.</h2>
-        </div>
-        
-        <div class="complexity-content">
-            <!-- Visual Elements -->
-            <div class="complexity-visual visual-square"></div>
-            <div class="complexity-visual visual-rhombus"></div>
+        <div class="container">
+            <div class="complexity-title">
+                <h2>Strategic Clarity. Real Value.</h2>
+            </div>
             
-            <!-- Paragraphs Row -->
-            <div class="complexity-row">
-                <!-- First Paragraph - Left -->
-                <div class="complexity-item left" data-complexity-aos="fade-up" data-complexity-delay="0">
-                    <p>Hospitality investors, owners, and operators face rising complexity; from evolving guest expectations and operational pressure to volatile capital markets and fierce competition.</p>
-                </div>
+            <div class="complexity-content">
+                <!-- Visual Elements -->
+                <div class="complexity-visual visual-square"></div>
+                <div class="complexity-visual visual-rhombus"></div>
                 
-                <!-- Second Paragraph - Center -->
-                <div class="complexity-item center" data-complexity-aos="fade-up" data-complexity-delay="300">
-                    <p>We bring clarity and precision to that complexity.</p>
-                </div>
-                
-                <!-- Third Paragraph - Right -->
-                <div class="complexity-item right" data-complexity-aos="fade-up" data-complexity-delay="600">
-                    <p>Our strategic advisory helps clients make high-impact decisions—improving asset performance, optimizing capital structure, and aligning every move with long-term value creation.</p>
+                <!-- Paragraphs Row -->
+                <div class="complexity-row">
+                    <!-- First Paragraph - Left -->
+                    <div class="complexity-item left" data-complexity-aos="fade-up" data-complexity-delay="0">
+                        <p>Hospitality investors, owners, and operators face rising complexity; from evolving guest expectations and operational pressure to volatile capital markets and fierce competition.</p>
+                    </div>
+                    
+                    <!-- Second Paragraph - Center -->
+                    <div class="complexity-item center" data-complexity-aos="fade-up" data-complexity-delay="300">
+                        <p>We bring clarity and precision to that complexity.</p>
+                    </div>
+                    
+                    <!-- Third Paragraph - Right -->
+                    <div class="complexity-item right" data-complexity-aos="fade-up" data-complexity-delay="600">
+                        <p>Our strategic advisory helps clients make high-impact decisions—improving asset performance, optimizing capital structure, and aligning every move with long-term value creation.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </section>
 
-
     <!-- Services Section -->
-    <section id="services" class="section">
+    <section id="services" class="service-section">
         <div class="container">
             <div class="section-title">
                 <h2>Where We Create Value</h2>
@@ -945,6 +1129,48 @@
         </div>
     </section>
 
+    <!-- All-Inclusive Strategy Section -->
+    <section id="edge" class="edge-section">
+        <div class="visual-element triangle"></div>
+        <div class="visual-element circle"></div>
+        
+        <div class="container">
+            <div class="edge-container">
+                <div class="edge-header" data-aos="fade-up">
+                    <h2>A Unique Edge in All‑Inclusive Strategy</h2>
+                </div>
+                
+                <div class="edge-content">
+                    <div class="edge-columns">
+                        <div class="edge-column" data-aos="fade-up" data-aos-delay="100">
+                            <div class="edge-title">
+                                <div class="edge-icon">
+                                    <i class="fas fa-globe-americas"></i>
+                                </div>
+                                <h3>Proven Experience Across the<br>All-Inclusive Spectrum</h3>
+                            </div>
+                            <p>Our deep, market-recognized expertise in all-inclusive spans operations, ownership, debt advisory, and capital structuring. This integrated perspective enables us to unlock the full potential of the all-inclusive model positioning resorts as resilient assets</p>
+                        </div>
+                        
+                        <div class="edge-column" data-aos="fade-up" data-aos-delay="200">
+                            <div class="edge-title">
+                                <div class="edge-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h3>Adaptive Model That Maximizes Value for All Stakeholders</h3>
+                            </div>
+                            <p>We transform all-inclusive resorts into stable, income-generating assets by aligning elevated guest experience with disciplined financial and operational management. Our flexible approach maximizes value creation and ensures long-term performance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="edge-divider" data-aos="fade-up" data-aos-delay="300">
+                        <span> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Expertise Section -->
     <section id="expertise" class="team-section">
         <div class="container">
@@ -971,7 +1197,7 @@
     </section>
 
     <!-- Clients Section -->
-    <section id="clients" class="section">
+    <section id="clients" class="clients-section">
         <div class="container">
             <div class="section-title">
                 <h2>Who We Work With</h2>
@@ -1011,7 +1237,7 @@
     <div class="container">
         <div class="testimonial-content" data-aos="fade-up">
             <h3>We've Sat in Your Seat</h3>
-            <p class="lead">We bring the perspective of principals who have been on all sides of hospitality —<strong>operators, investors, owners, and lenders.</strong></p>
+            <p class="lead">We bring the perspective of principals who have been on all sides of hospitality - <strong>operators, investors, owners, and lenders.</strong></p>
             <p class="lead">We understand the weight of strategic decisions because we’ve made them.</p>
             <p class="lead">That experience shapes how we think, how we advise, and how we stay close to what matters.</p>
             <p class="lead"><strong>Every engagement is led by us — directly and with purpose.</strong></p>
@@ -1047,31 +1273,44 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
-                    <h5 class="fw-bold mb-3">CRSA</h5>
+                    <h5>CRSA</h5>
                     <p class="text-white-50 mb-4">Strategic Advisory for Hospitality Investors, Owners, and Operators</p>
                 </div>
+                
                 <div class="col-lg-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#home">Home</a></li>
-                        <li class="mb-2"><a href="#services">Where We Create Value</a></li>
-                        <li class="mb-2"><a href="#expertise">Expertise</a></li>
-                        <li class="mb-2"><a href="#clients">Who We Work With</a></li>
-                        <li class="mb-2"><a href="#contact">Contact</a></li>
+                    <h5>Navigation</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#complexity">Strategic Clarity</a></li>
+                        <li><a href="#services">Where We Create Value</a></li>
+                        <li><a href="#edge">All-Inclusive Edge</a></li>
+                        <li><a href="#expertise">Deep Expertise</a></li>
+                        <li><a href="#clients">Who We Work With</a></li>
                     </ul>
                 </div>
+                
                 <div class="col-lg-4">
                     <h5>Contact</h5>
-                    <p class="text-white-50 mb-2">contact@crsa.com</p>
+                    <p class="mb-3"><a href="mailto:contact@crsa-advisors.com">contact@crsa.com</a></p>
+                    <div class="social-links mb-3">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <!-- Add other social links as needed -->
+                    </div>
+                    <p class="text-white-50 mb-4">Madrid | Mexico City | Philadelphia</p>
                 </div>
-            
-            <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
-            <div class="text-center">
-                <p class="mb-0 text-white-50"> Madrid | Mexico City | Philadelphia</p>
             </div>
             
-            <div class="text-center">
-                <p class="mb-0 text-white-50">&copy;2025 CRSA. All rights reserved.</p>
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-white-50 small">&copy; 2025 CRSA. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 text-white-50 small">
+                        <a href="#" class="text-white-50">Privacy Policy</a> | 
+                        <a href="#" class="text-white-50">Terms</a>
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
