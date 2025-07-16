@@ -944,8 +944,26 @@
             .complexity-visual {
                 display: none;
             }
-        }
 
+            /* Edge section adjustments */
+            .edge-columns {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            
+            .edge-column::before {
+                display: none;
+            }
+            
+            .edge-column p {
+                padding-left: 0;
+            }
+            
+            .edge-divider span {
+                width: 100%;
+                transform: rotate(0deg);
+            }
+        }
 
         @media (max-width: 768px) {
             .navbar-brand {
@@ -962,6 +980,13 @@
             
             .hero-section {
                 min-height: 700px;
+                padding-top: 100px;
+            }
+            
+            .hero-title {
+                margin-top: 4rem;
+                margin-bottom: 8rem;
+                font-size: 2.25rem;
             }
             
             .menu-nav a {
@@ -971,12 +996,31 @@
             .service-card {
                 height: auto;
                 min-height: 300px;
+                padding: 1.75rem;
+            }
+
+            .service-section {
+                padding: 6rem 0;
+            }
+
+            .team-member {
+                padding: 2rem;
+            }
+
+            .client-card {
+                padding: 1.75rem;
             }
         }
 
         @media (max-width: 576px) {
             .hero-title {
-                font-size: 2.5rem;
+                font-size: 2rem;
+                margin-top: 3rem;
+                margin-bottom: 6rem;
+            }
+            
+            .hero-text-content .lead {
+                font-size: 1.1rem;
             }
             
             .service-card {
@@ -988,8 +1032,133 @@
             }
             
             .team-member {
-                padding: 2rem;
+                padding: 1.5rem;
             }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .testimonial-content h3 {
+                font-size: 2rem;
+            }
+
+            .contact-btn {
+                font-size: 1.1rem;
+                padding: 0.75rem 2rem;
+            }
+        }
+
+        /* Extra small devices (phones, 480px and down) */
+        @media (max-width: 480px) {
+            .navbar-brand {
+                font-size: 1.25rem;
+            }
+
+            .brand-tagline {
+                font-size: 0.7rem;
+            }
+
+            .hero-title {
+                font-size: 1.75rem;
+                margin-top: 2rem;
+                margin-bottom: 4rem;
+            }
+
+            .hero-section {
+                min-height: 600px;
+                padding-top: 80px;
+            }
+
+            .menu-nav a {
+                font-size: 1.25rem;
+            }
+
+            .menu-nav li {
+                margin: 1rem 0;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .section-title h2 {
+                font-size: 1.75rem;
+            }
+
+            .section-title h2::after {
+                bottom: -10px;
+            }
+
+            .service-card {
+                padding: 1.25rem;
+            }
+
+            .service-title {
+                font-size: 1.25rem;
+            }
+
+            .edge-header h2 {
+                font-size: 2rem;
+            }
+
+            .edge-title h3 {
+                font-size: 1.5rem;
+            }
+
+            .edge-column p {
+                font-size: 1rem;
+            }
+
+            .team-member h3 {
+                font-size: 1.5rem;
+            }
+
+            .team-member p {
+                font-size: 0.95rem;
+            }
+
+            .client-card .fas {
+                font-size: 2rem;
+            }
+
+            .testimonial-content h3 {
+                font-size: 1.75rem;
+            }
+
+            .testimonial-content .lead {
+                font-size: 1rem;
+            }
+
+            .footer h5 {
+                font-size: 1.25rem;
+            }
+
+            .footer-links a {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Touch target improvements */
+        a, button, .service-card, .client-card {
+            touch-action: manipulation;
+        }
+
+        .hamburger {
+            padding: 1rem;
+        }
+
+        .menu-nav a {
+            padding: 0.5rem 1rem;
+            display: inline-block;
+        }
+
+        .contact-btn {
+            min-height: 48px;
+            min-width: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
